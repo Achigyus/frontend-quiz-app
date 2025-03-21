@@ -1,0 +1,15 @@
+@use 'variables' as vars
+
+:root
+    --background_color: #{vars.$light_gray}
+    --text_color: #{vars.$dark_navy}
+    --sec_text_color: #{vars.$gray_navy}
+    --bg_img: url('../assets/images/pattern-background-mobile-light.svg')
+    --btn_color: #{vars.$white}
+
+[data-theme="dark"]
+    --background_color: #{vars.$dark_navy}
+    --text_color: #{vars.$white}
+    --sec_text_color: #{vars.$light_blue}
+    --bg_img: url('../assets/images/pattern-background-mobile-dark.svg')
+    --btn_color: #{vars.$navy}

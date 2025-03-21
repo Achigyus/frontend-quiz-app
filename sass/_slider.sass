@@ -1,0 +1,34 @@
+@use 'variables' as vars
+
+[type='range']
+    appearance: none
+    -webkit-appearance: none
+    width: 100px
+    height: 8px
+    outline: none
+    border-radius: 0
+    border: none
+    background: vars.$purple
+
+[type='range']::-webkit-slider-thumb
+    appearance: none
+
+[type='range']::-moz-range-thumb
+    appearance: none
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus
+    outline: none
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+
+input[type="range"]:active::-webkit-slider-thumb
+    border: 2px solid vars.$light_blue
+    background: vars.$purple
+
+/******** Firefox ********/
+input[type="range"]:active::-moz-range-thumb
+    border: 2px solid vars.$light_blue
+    background: vars.$purple
+

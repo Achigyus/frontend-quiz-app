@@ -1,7 +1,11 @@
 const express = require('express')
 const { connectToDb, getDb } = require('./db')
+const cors = require('cors')
 
 const app = express()
+
+// add cors
+app.use(cors({ origin: 'http://127.0.0.1:5500' }));
 
 // db connection
 
@@ -58,7 +62,7 @@ app.get('/css', (req, res) => {
         })
 })
 
-app.get('/js', (req, res) => {
+app.get('/javascript', (req, res) => {
 
     let quizzes = []
     db.collection('quizzes')
@@ -71,7 +75,7 @@ app.get('/js', (req, res) => {
         })
 })
 
-app.get('/acc', (req, res) => {
+app.get('/accessibility', (req, res) => {
 
     let quizzes = []
     db.collection('quizzes')

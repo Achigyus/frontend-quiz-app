@@ -9,7 +9,7 @@ function compileSass(cb) {
 }
 
 function watchSass() {
-    watch(['*.sass'], compileSass);
+    watch(['./sass/*.sass'], compileSass);
 }
 
 exports.default = series(compileSass, watchSass);

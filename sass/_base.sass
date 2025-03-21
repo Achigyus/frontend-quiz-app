@@ -1,6 +1,7 @@
 @use 'variables' as vars
 @use 'breakpoint' as bp
-@use "sass:list"
+@use 'lightdarkmode'
+@use 'slider'
 @font-face
     font-family: 'Rubik'
     src: url('../assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype')
@@ -33,6 +34,159 @@
 
 body
     font-family: 'Rubik', 'Inter', 'Poppins', 'Arial', sans-serif
+    background: var(--background_color)
+    background-image: var(--bg_img)
+    background-position: center
+    background-size: cover
+    color: var(--text_color)
+
+.fw300
+    font-weight: 300
+
+.fw400
+    font-weight: 400
+    
+.fw500
+    font-weight: 500
 
 .fw700
     font-weight: 700
+
+.wrap
+    padding: 0 vars.$padding_1_5x
+
+.header_cont
+    padding-block-start: vars.$padding
+    padding-block-end: vars.$padding
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.header_logo_img_cont
+    block-size: 2.5rem
+    inline-size: 2.5rem
+
+.header_logo_title
+    display: flex
+    align-items: center
+    justify-content: space-between
+    opacity: 0
+
+.header_light_dark
+    display: flex
+    align-items: center
+    gap: 0.5rem
+
+
+/* Container for the toggle */
+.header_toggle_switch 
+    position: relative
+    display: inline-block
+    width: 2rem
+    height: 1.25rem
+
+
+/* Hide default checkbox */
+.header_toggle_switch input 
+    opacity: 0
+    width: 0
+    height: 0
+
+
+/* The track */
+.header_slider 
+    position: absolute
+    cursor: pointer
+    background-color: vars.$purple
+    border-radius: 999px
+    width: 100%
+    height: 100%
+    transition: background-color 0.3s
+
+
+/* The circular slider */
+.header_slider::before 
+    content: ""
+    position: absolute
+    height: 0.75rem
+    width: 0.75rem
+    left: 4px
+    bottom: 4px
+    background-color: vars.$white
+    border-radius: 50%
+    transition: transform 0.3s
+
+
+/* Toggled state */
+.header_toggle_switch input:checked+.header_slider 
+    background-color: vars.$purple
+
+
+.header_toggle_switch input:checked+.header_slider::before 
+    transform: translateX(0.75rem)
+
+
+.main
+    min-block-size: calc( 100vh - 3.5rem )
+
+.main_cont
+    padding-block-start: vars.$padding_2x
+    padding-block-end: vars.$padding_2x
+    display: flex
+    flex-direction: column
+    gap: 2.5rem
+
+.main_top_h1
+    font-size: 2.5rem
+    line-height: 1.0
+    margin-block-end: 1rem
+
+.main_top_h1 span
+    font-weight: 500
+
+.main_top_p
+    font-size: 0.875rem
+    line-height: 1.5
+    color: var(--sec_text_color)
+    font-style: italic
+
+.main_bottom
+    display: flex
+    flex-direction: column
+    gap: 0.75rem
+
+
+.main_botom_quiz_card
+    display: flex
+    align-items: center
+    padding: 0.75rem
+    gap: 1rem
+    background: var(--btn_color)
+    border: none
+    border-radius: 0.75rem
+    color: var(--text_color)
+    font-size: 1.125rem
+    line-height: 1.0
+
+
+.main_botom_quiz_card_img_cont
+    block-size: 2.5rem
+    inline-size: 2.5rem
+    border-radius: 0.375rem
+    background: vars.$white
+    display: flex
+    align-items: center
+    justify-content: center
+
+.main_botom_quiz_card_img
+    display: block
+    border-radius: 0.375rem
+    block-size: 1.75rem
+    inline-size: 1.75rem
+
+.attribution
+    text-align: center
+    padding: 0.5rem
+
+.attribution a
+    color: vars.$green

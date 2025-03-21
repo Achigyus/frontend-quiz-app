@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Frontend quiz app</title>
   <link rel="stylesheet" href="./dist/index.css">
 </head>
+
 <body>
+  <header class="header">
+    <div class="wrap">
+      <div class="header_cont" id="header_cont">
+        <div class="header_logo_title">
+          <div class="header_logo_img_cont">
+            <img src="./assets/images/icon-html.svg" alt="#" class="header_logo_img" id="header_logo_img">
+          </div>
+          <p class="header_title" id="header_title"></p>
+        </div>
+        <div class="header_light_dark">
+          <div class="header_toggle_img_cont light">
+            <img src="./assets/images/icon-sun-dark.svg" alt="light" class="header_toggle_img_cont light" id="sunIcon">
+          </div>
+          <label class="header_toggle_switch">
+            <input id="dark_light_toggle_switch" type="checkbox" />
+            <span class="header_slider"></span>
+          </label>
+          <div class="header_toggle_img_cont dark">
+            <img src="./assets/images/icon-moon-dark.svg" alt="dark`" class="header_toggle_img_cont dark" id="moonIcon">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-  <!-- Quiz menu start -->
+  <main class="main">
+    <div class="wrap">
+      <div class="main_cont" id="main_cont">
+        <div class="main_top" id="main_top">
+          <h1 class="main_top_h1 fw300">Welcome to the <span>Frontend Quiz!</span></h1>
+          <p class="main_top_p fw400">Pick a subject to get started.</p>
+        </div>
 
-  Welcome to the Frontend Quiz!
-  Pick a subject to get started.
+        <div class="main_bottom" id="main_bottom">
+          <button class="main_botom_quiz_card fw500" id="html">
+            <div class="main_botom_quiz_card_img_cont">
+              <img src="./assets/images/icon-html.svg" alt="#" class="main_botom_quiz_card_img">
+            </div>
+            HTML
+          </button>
 
-  HTML
-  CSS
-  JavaScript
-  Accessibility
+          <button class="main_botom_quiz_card fw500" id="css">
+            <div class="main_botom_quiz_card_img_cont">
+              <img src="./assets/images/icon-css.svg" alt="#" class="main_botom_quiz_card_img">
+            </div>
+            CSS
+          </button>
 
-  <!-- Quiz menu end -->
+          <button class="main_botom_quiz_card fw500" id="javascript">
+            <div class="main_botom_quiz_card_img_cont">
+              <img src="./assets/images/icon-js.svg" alt="#" class="main_botom_quiz_card_img">
+            </div>
+            JavaScript
+          </button>
 
-  <!-- Quiz question start -->
+          <button class="main_botom_quiz_card fw500" id="accessibility">
+            <div class="main_botom_quiz_card_img_cont">
+              <img src="./assets/images/icon-accessibility.svg" alt="#" class="main_botom_quiz_card_img">
+            </div>
+            Accessibility
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  Question <!-- number --> of 10
-
-  A
-  B
-  C
-  D
-
-  Submit answer
-
-  <!-- Quiz question end -->
-
-  <!-- Quiz completed start -->
-
-  Quiz completed
-  You scored...
-
-  <!-- score --> out of 10
-
-  <!-- Quiz completed end -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="attribution fw500">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/Achigyus" target="_blank">Achigyus</a>.
+      </div>
+    </div>
+  </footer>
 
   <script src="./dist/index.js"></script>
 
 </body>
+
 </html>
