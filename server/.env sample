@@ -1,0 +1,5 @@
+PORT=3000
+MONGO_URI='mongodb connection string'
+CLIENT_URL='http://127.0.0.1:5500'
+
+Ensure to replace with your own MongoDB connection string. You can get it from MongoDB Atlas. 

@@ -1,34 +1,50 @@
-@use 'variables' as vars
+@use 'variables' as vars;
 
 [type='range']
     appearance: none
     -webkit-appearance: none
-    width: 100px
-    height: 8px
+    width: 100%
+    height: 1rem
     outline: none
-    border-radius: 0
+    border-radius: 999px
     border: none
-    background: vars.$purple
+    background: vars.$navy // Default background
+    padding: 4px
+    position: relative
+    pointer-events: none // Prevents direct user interaction
+    cursor: default
 
+/***** Track Styles (Hidden) *****/
+[type='range']::-webkit-slider-runnable-track
+    width: 100%
+    height: 1rem
+    background: transparent // Let JS handle background
+    border-radius: 999px
+
+[type='range']::-moz-range-track
+    width: 100%
+    height: 1rem
+    background: transparent
+    border-radius: 999px
+
+/***** Fake Border Radius Using Thumb *****/
 [type='range']::-webkit-slider-thumb
     appearance: none
+    width: 1rem
+    height: 1rem
+    border-radius: 50%
+    background: vars.$purple
+    pointer-events: none // Prevents direct user dragging
+    position: relative
 
 [type='range']::-moz-range-thumb
     appearance: none
-
-/***** Focus Styles *****/
-/* Removes default focus */
-input[type="range"]:focus
-    outline: none
-
-/***** Chrome, Safari, Opera, and Edge Chromium *****/
-
-input[type="range"]:active::-webkit-slider-thumb
-    border: 2px solid vars.$light_blue
+    width: 1rem
+    height: 1rem
+    border-radius: 50%
     background: vars.$purple
+    pointer-events: none
 
-/******** Firefox ********/
-input[type="range"]:active::-moz-range-thumb
-    border: 2px solid vars.$light_blue
-    background: vars.$purple
-
+input[type="radio"] 
+    opacity: 0
+    position: absolute

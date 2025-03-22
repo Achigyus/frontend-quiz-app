@@ -18,3 +18,5 @@ package-lock.json
 node_modules
 README-old.md
 .vscode
+index copy.ts
+*.env

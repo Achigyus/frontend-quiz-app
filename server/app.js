@@ -1,11 +1,15 @@
+require('dotenv').config();
 const express = require('express')
 const { connectToDb, getDb } = require('./db')
 const cors = require('cors')
 
 const app = express()
 
+const PORT = process.env.PORT || 3000;
+const CLIENT_URL = process.env.CLIENT_URL;
+
 // add cors
-app.use(cors({ origin: 'http://127.0.0.1:5500' }));
+app.use(cors({ origin:  CLIENT_URL}));
 
 // db connection
 
@@ -13,8 +17,8 @@ let db
 
 connectToDb((err) => {
     if(!err) {
-        app.listen(3000, () => {
-            console.log('Listening on port 3000')
+        app.listen(PORT, () => {
+            console.log(`Listening on port ${PORT}`)
         })
         db = getDb()
     }
