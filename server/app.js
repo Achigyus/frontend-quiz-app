@@ -5,7 +5,7 @@ const cors = require('cors')
 
 const app = express()
 const PORT = process.env.PORT || 3000
-const CLIENTURL = process.env.CLIENTURL || 'http://127.0.0.1:5500'
+const CLIENTURL = process.env.CLIENTURL || 'https://frontend-quiz-app-achigyus.netlify.app/'
 
 // add cors
 app.use(cors({ origin: CLIENTURL }));
