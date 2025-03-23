@@ -18,8 +18,8 @@ const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matche
 const sunIcon = document.getElementById("sunIcon");
 const moonIcon = document.getElementById("moonIcon");
 // vars
-// let apiUrl = 'https://frontend-quiz-app-3tqr.onrender.com'
-let apiUrl = 'http://localhost:3000';
+let apiUrl = 'https://frontend-quiz-app-3tqr.onrender.com';
+// let apiUrl = 'http://localhost:3000'
 let quizData = null;
 let numberOfQuestions = 0;
 let title = '';
