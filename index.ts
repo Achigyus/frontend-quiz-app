@@ -10,8 +10,8 @@ const moonIcon = document.getElementById("moonIcon") as HTMLImageElement | null;
 
 
 // vars
-let apiUrl = 'https://frontend-quiz-app-3tqr.onrender.com'
-// let apiUrl = 'http://localhost:3000'
+// let apiUrl = 'https://frontend-quiz-app-3tqr.onrender.com'
+let apiUrl = 'http://localhost:3000'
 let quizData: QuizData | null = null;
 let numberOfQuestions = 0
 let title = ''

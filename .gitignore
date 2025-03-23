@@ -20,3 +20,4 @@ README-old.md
 .vscode
 index copy.ts
 *.env
+data.json

@@ -5,10 +5,11 @@ const cors = require('cors')
 
 const app = express()
 const PORT = process.env.PORT || 3000
-const CLIENTURL = process.env.CLIENTURL || 'https://frontend-quiz-app-achigyus.netlify.app'
+const CLIENTURL = process.env.CLIENTURL
 
 // add cors
-app.use(cors({ origin: 'https://frontend-quiz-app-achigyus.netlify.app' }));
+// app.use(cors({ origin: CLIENTURL }));
+app.use(cors({ origin: 'http://127.0.0.1:5500' }));
 
 // db connection
 
